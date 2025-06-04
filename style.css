@@ -1,0 +1,94 @@
+/* style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  flex: 1 1 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f1c40f;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 0.5rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #f1c40f;
+}
+
+.content {
+  flex: 3 1 700px;
+  background: white;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.content section {
+  margin-bottom: 2rem;
+  background: #fdfdfd;
+  padding: 1rem;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.content h2 {
+  color: #2c3e50;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar h2 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul li {
+    font-size: 0.9rem;
+  }
+} 

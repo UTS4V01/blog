@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C Programming Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Topics</h2>
+      <nav>
+        <ul>
+          <li><a href="#preprocessor">Preprocessor Directives</a></li>
+          <li><a href="#tokens">Tokens in C</a></li>
+          <li><a href="#formatted-io">Formatted I/O Functions</a></li>
+          <li><a href="#unformatted-io">Unformatted I/O Functions</a></li>
+          <li><a href="#control-flow">Control Flow</a></li>
+          <li><a href="#arrays">Arrays</a></li>
+          <li><a href="#array-operations">Array Operations</a></li>
+          <li><a href="#transpose">Transpose</a></li>
+          <li><a href="#pattern-printing">Pattern Printing</a></li>
+          <li><a href="#string-handling">String Handling Functions</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="preprocessor">
+        <h2>Preprocessor Directives</h2>
+        <p>Preprocessor directives in C are special instructions that are processed before the actual compilation of code begins. They begin with the '#' symbol and are used to include header files, define constants, and conditionally compile code. Common directives include <code>#include</code> for including libraries, <code>#define</code> for defining constants, and conditional directives like <code>#ifdef</code>, <code>#ifndef</code>, and <code>#endif</code>. These directives help in managing large codebases efficiently and make code reusable and modular. Additionally, macros created using <code>#define</code> can improve code readability and maintainability. Conditional compilation is useful for writing platform-independent code or including debugging statements only when necessary.</p>
+      </section>
+
+      <section id="tokens">
+        <h2>Tokens in C</h2>
+        <p>Tokens are the smallest individual units in a C program that are meaningful to the compiler. The different types of tokens in C include:</p>
+        <ul>
+          <li><strong>Keywords:</strong> Reserved words like <code>int</code>, <code>return</code>, <code>if</code>, <code>else</code>.</li>
+          <li><strong>Identifiers:</strong> Names given to variables, functions, arrays, etc.</li>
+          <li><strong>Constants:</strong> Fixed values like 100, 3.14, 'A', etc.</li>
+          <li><strong>String literals:</strong> Sequence of characters enclosed in double quotes, e.g., "Hello World".</li>
+          <li><strong>Operators:</strong> Symbols used for computations, e.g., +, -, *, /, ==.</li>
+          <li><strong>Special symbols:</strong> Characters like {}, [], (), ;, #, etc., that have syntactical meaning.</li>
+        </ul>
+        <p>Understanding tokens is critical for parsing and writing syntactically correct C programs.</p>
+      </section>
+
+      <section id="formatted-io">
+        <h2>Formatted I/O Functions</h2>
+        <p>Formatted input/output functions provide flexible ways to read from and write to standard input/output. The <code>printf()</code> function allows displaying data with control over formatting, such as number of decimal places, alignment, and more. Similarly, <code>scanf()</code> reads formatted input from the user.</p>
+        <pre><code>int age;
+printf("Enter your age: ");
+scanf("%d", &age);
+printf("You entered: %d\n", age);</code></pre>
+        <p>You can also format floats, strings, and characters using format specifiers like %f, %s, and %c. These functions are essential for interactive programs and user interfaces in console-based applications.</p>
+      </section>
+
+      <section id="unformatted-io">
+        <h2>Unformatted I/O Functions</h2>
+        <p>Unformatted I/O functions deal with character-level and string-level operations. Unlike formatted functions, they do not use format specifiers. Examples include:</p>
+        <ul>
+          <li><code>getchar()</code> – reads a single character from standard input.</li>
+          <li><code>putchar()</code> – writes a single character to standard output.</li>
+          <li><code>gets()</code> – reads a string from input (deprecated, use with caution).</li>
+          <li><code>puts()</code> – writes a string followed by a newline.</li>
+        </ul>
+        <p>These functions are simpler and faster but do not provide control over formatting. They're commonly used for reading and displaying quick messages or prompts.</p>
+      </section>
+
+      <section id="control-flow">
+        <h2>Control Flow</h2>
+        <p>Control flow in C determines the sequence of execution of statements in a program. It includes:</p>
+        <ul>
+          <li><strong>Decision-making:</strong> <code>if</code>, <code>if-else</code>, <code>nested if</code>, <code>switch-case</code>.</li>
+          <li><strong>Loops:</strong> <code>for</code>, <code>while</code>, <code>do-while</code> for repetitive tasks.</li>
+          <li><strong>Branching:</strong> <code>break</code>, <code>continue</code>, and <code>goto</code> for altering flow.</li>
+        </ul>
+        <p>These constructs provide decision logic, iteration control, and branching capability to handle complex logical flows in a program efficiently.</p>
+      </section>
+
+      <section id="arrays">
+        <h2>Arrays</h2>
+        <p>An array is a collection of elements of the same type stored in contiguous memory. It can be one-dimensional or multi-dimensional. You access elements using an index:</p>
+        <pre><code>int arr[5] = {1, 2, 3, 4, 5};
+printf("%d", arr[2]); // outputs 3</code></pre>
+        <p>Arrays simplify the management of lists and tables of data and are widely used in sorting, searching, and storing large datasets in memory-efficient ways.</p>
+      </section>
+
+      <section id="array-operations">
+        <h2>Array Operations</h2>
+        <p>Common operations on arrays include:</p>
+        <ul>
+          <li><strong>Traversal:</strong> Using loops to access each element.</li>
+          <li><strong>Insertion:</strong> Adding an element at a given position.</li>
+          <li><strong>Deletion:</strong> Removing an element and shifting the rest.</li>
+          <li><strong>Searching:</strong> Linear or binary search for finding elements.</li>
+          <li><strong>Sorting:</strong> Bubble sort, selection sort, quicksort, etc.</li>
+        </ul>
+        <p>Understanding these operations is key to manipulating and analyzing data stored in arrays.</p>
+      </section>
+
+      <section id="transpose">
+        <h2>Transpose</h2>
+        <p>Transposing a matrix means flipping it over its diagonal, switching the row and column indices of each element. For example, if A is a 3x2 matrix, its transpose A<sup>T</sup> will be a 2x3 matrix.</p>
+        <pre><code>for (i = 0; i < row; i++) {
+  for (j = 0; j < col; j++) {
+    transpose[j][i] = matrix[i][j];
+  }
+}</code></pre>
+        <p>This operation is commonly used in scientific computing, graphics, and solving systems of equations.</p>
+      </section>
+
+      <section id="pattern-printing">
+        <h2>Pattern Printing</h2>
+        <p>Pattern printing is a great way to learn nested loops. You can print a variety of shapes like pyramids, triangles, diamonds using characters or numbers.</p>
+        <pre><code>// Star triangle
+for (i = 1; i <= n; i++) {
+  for (j = 1; j <= i; j++) {
+    printf("*");
+  }
+  printf("\n");
+}</code></pre>
+        <p>These problems enhance logical thinking and reinforce concepts of loop nesting and flow control.</p>
+      </section>
+
+      <section id="string-handling">
+        <h2>String Handling Functions</h2>
+        <p>C provides several built-in functions in <code>&lt;string.h&gt;</code> for string manipulation:</p>
+        <ul>
+          <li><code>strlen()</code> – Returns the length of a string.</li>
+          <li><code>strcpy()</code> – Copies one string to another.</li>
+          <li><code>strcat()</code> – Concatenates two strings.</li>
+          <li><code>strcmp()</code> – Compares two strings.</li>
+        </ul>
+        <p>String handling in C requires careful memory management since strings are null-terminated character arrays. These functions simplify operations like input validation, formatting, and file processing.</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
